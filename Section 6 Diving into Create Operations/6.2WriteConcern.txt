@@ -1,0 +1,17 @@
+// write concern
+by default it is 1,
+w: write =>How many instances you want this write to be acknowledged
+j:journal=>additional file the storage engine manages which is like a TODO file,
+to save operations the storage engine needs to do like storing data
+It gives nice backup
+Why do we write on journal, why not on the database directly?
+Its because the writing to database is performance heavy job.
+j:true means please only report a sucess write to me after it has been
+both acknowledged and saved in the database
+wtimeout:which timeframe do you give your server to report sucess for this write before it fails.
+if we set very low wtimeout,it ll fail even though there is no problem 
+due to less time to fulfill the operation
+
+example:db.persons.insertOne({name:"Pradeep Dai",age:35},{writeConcern:{w:0,j:false,wtimeout:200}})
+
+wtimeout:just to not wait unnecessarily long

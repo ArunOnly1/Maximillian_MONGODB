@@ -1,0 +1,36 @@
+//Data Modeling Considerations
+=>In which format will you fetch your data?
+=>How often will you fetch and change your data?
+=>How much data will you save(and how big is it)?
+=>How is your data related?
+=>Will duplicates hurt you(=>how many updates)?
+=>Will you hit Data/Storage Limits?
+
+
+//Modelling Schemas
+=>Schemas should be modelled based on your application needs
+=>Important factors are:Read and write frequency,relations, amount(and size) of data
+
+
+//Modelling relations
+=>Two Options:Embedded documents or references
+=>Use embedded documents if you got one-to-one or one-to-many relationships 
+and no app or data size reason to split
+=>Use references if data amount/size or application needs require it ot for many-to-many relations
+
+
+//Schema Validation
+=>Can define rules to validate inserts and update before writing to the database
+=>Choose your validation level and action based on your application requirements
+
+
+
+//Validation level 
+Which documents get validated?
+Strict: All inserts and updates
+Moderate:All insert and updates to correct documents
+
+Validation Action
+What happens if validation fails?
+Error: throw error and deny insert/update
+Warn:Log warning but proceed

@@ -1,0 +1,14 @@
+//Not Operator
+db.shows.find({genres:{$not:{$eq:'Horror'}}}).count()
+db.shows.find({runtime:{$not:{$eq:60}}}).count()
+
+//And Operator
+ db.shows.find({$and:[{'rating.average':{$gt:9}},{genres:"Drama"}]})
+
+
+//OR Operator
+ db.shows.find({$or:[{"rating.average":{$lt:5}},{'rating.average':{$gt:9.3}}]}).count()
+
+//Nor Operator
+db.shows.find({$nor:[{"rating.average":{$lt:5}},{'rating.average':{$gt:9.3}}]})
+

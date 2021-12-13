@@ -1,0 +1,8 @@
+Start MongoDB Server as Process & Service
+Configuring Database & Log Path()
+
+//To shutdown running background Server
+use admin
+db.shutdownServer()
+
+//mongod config file

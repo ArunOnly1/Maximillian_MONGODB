@@ -1,0 +1,20 @@
+=>Methods filters and Operators
+=>Query Selectors(Read)
+=>Projection Opearators(READ)
+
+
+//Query Selectors
+=>Comparison
+=>Evaluation
+=>Logical
+=>Array
+=>Element
+=>Comments
+=>Geospatial
+
+
+//Projection Opearators
+=> $
+=> $elemMatch
+=> $meta
+=> $slice

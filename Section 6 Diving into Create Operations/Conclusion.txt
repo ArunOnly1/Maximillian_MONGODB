@@ -1,0 +1,16 @@
+insertOne and insertMany is recommended 
+but insert is not recommended as it also does not return inserted inserted
+
+//Ordererd inserts {ordered:true}
+By default while using insertMany(),inserts are ordered 
+- that means the inserting process stops if an error occurs
+
+//Unorderd insert {ordered:false}
+=>inserting process will continue even if the error occurs
+
+I=>n both ordered and unordered inserts, no successful inserts(before the error) will be rolled back
+
+//Write Concern
+=>Data should be stored and you can control the 'level of guarantee' of that to happen
+with the writeConcern option
+=>Choose the option value based on the app requirement

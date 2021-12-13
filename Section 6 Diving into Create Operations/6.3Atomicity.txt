@@ -1,0 +1,7 @@
+operation
+Either Error or Success
+If error=> rolled back(i.e.Nothing is saved)
+If success=>Saved as a whole
+
+MongoDB CRUD operations are Atomic on the Document Level(including Embedded Documents)
+except insertMany in which the correct data are inserted and is based on ordered:true or ordered:false
